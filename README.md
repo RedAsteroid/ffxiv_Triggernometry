@@ -1,0 +1,2 @@
+# ffxiv_Triggernometry
+个人写的零碎Triggernometry触发器，部分需要其他插件联动，仅供参考
