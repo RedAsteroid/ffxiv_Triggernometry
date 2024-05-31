@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
-<TriggernometryExport Version="1">
-  <ExportedFolder Id="cdb21fd0-c4d9-4e97-86d2-8e67ca044e49" Name="正统优雷卡播报轮椅测试版v0.35" Enabled="true">
+<TriggernometryExport PluginVersion="1.2.0.108">
+  <ExportedFolder Id="6d8709db-c265-4223-9d33-4cde095d4121" Name="正统优雷卡播报轮椅测试版v0.37" Enabled="true">
     <Folders>
-      <Folder Id="a0094daa-c9f7-4646-ba2f-809bdcb88558" Name="设置：聊天频道输出 (勾选您想要的频道)" Enabled="true">
+      <Folder Id="afe6c514-562e-4719-b517-a691dabd0ba1" Name="设置：聊天频道输出 (勾选您想要的频道)" Enabled="true">
         <Folders />
         <Triggers>
-          <Trigger Enabled="true" Name="/e 默语频道" Id="325e8dde-cdd4-4913-8337-adc4b4a23702" RegularExpression="^正统优雷卡_默语频道_Clone:(?&lt;text&gt;.+?)$">
+          <Trigger Enabled="true" Name="/e 默语频道" Id="d558da0f-867a-4b92-84b6-00f1f191cad8" RegularExpression="^正统优雷卡_默语频道_Clone:(?&lt;text&gt;.+?)$">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/e ${text}" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
@@ -17,7 +17,7 @@
             <Condition Enabled="false" Grouping="Or" />
             <Conditions />
           </Trigger>
-          <Trigger Enabled="true" Name="/p 小队频道" Id="a7842f9a-f3c0-4e05-9d2d-d280190e0609" RegularExpression="^正统优雷卡_小队频道_Clone:(?&lt;text&gt;.+?)$">
+          <Trigger Enabled="true" Name="/p 小队频道" Id="03056b27-dc36-4b4b-af87-4a3f85c52c3c" RegularExpression="^正统优雷卡_小队频道_Clone:(?&lt;text&gt;.+?)$">
             <Actions>
               <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/p ${text}" ActionType="NamedCallback">
                 <Condition Enabled="false" Grouping="Or" />
@@ -31,78 +31,484 @@
           </Trigger>
         </Triggers>
       </Folder>
-      <Folder Id="3e2b672e-f6e4-4ed6-911a-e75af07c0a65" Name="B. 本体" Enabled="true">
+      <Folder Id="650fe8dd-6907-471e-adde-aa4f05f5afc4" Name="A. 简介 + 指南" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="1. 进入正统优雷卡或下层后播报精英怪信息、播报陷阱触发信息、自动标记铜宝箱拟态怪。" Id="07d76d21-09d7-4b11-adc2-bae13f1357cc" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="2. 您需要安装鲶鱼精邮差实现发送聊天与标记功能：github.com/Natsukage/PostNamazu" Id="89600ef0-3d06-4e5e-9492-8c047ee38331" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="3. 非常实验性，可能会产生误报，请慎重甄别" Id="9a2de2ed-292c-4e6d-8395-d4153bd4736c" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="5. 安装后开启所有监听，另外关于配置问题解决默认不勾选: https://docs.qq.com/doc/DZE9Sa1FxSmdZZ2Fo" Id="a7933b8d-a432-4035-8dd3-d589870b23f9" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="4. 诱饵陷阱精确检查需要您安装CactbotSelf插件: https://github.com/tssailzz8/cacbotSelf/releases/tag/v1.1.1" Id="132e8888-7388-4ccc-8a20-03b8c7ffeece" RegularExpression="">
+            <Actions />
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="4cf08406-e60f-4013-afe5-f66c2c3d9677" Name="B. 本体" Enabled="true">
         <Folders>
-          <Folder FfxivZoneFilterRegularExpression="^(1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124)$" Id="fea2a9e6-984b-4b7d-9c02-87a452f4e000" Name="3. 自动标记铜宝箱拟态怪" Enabled="true">
-            <Folders />
+          <Folder Id="2ea9043b-fea9-4969-993a-8b9bfa3e3358" Name="0. 初始化" Enabled="true">
+            <Folders>
+              <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124)$" Id="d73d627e-eaaf-4683-8624-d96467e7de37" Name="内部" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="1. 初始化 - 移动到下一层" Id="166640b4-aa4f-432f-86fa-f9b1092d03e8" RegularExpression="^.{14} ChatLog 00:0839::成功进行了传送！$">
+                    <Actions>
+                      <Action OrderNumber="1" ActionType="Placeholder" Description="1" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="正统优雷卡_精英怪提醒_精英怪_当前.*" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" ActionType="Placeholder" Description="2" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_妨碍陷阱.*" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_爆炸陷阱.*" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="7" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="8" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="9" ActionType="Placeholder" Description="3" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="11" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="12" ActionType="Placeholder" Description="4" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="13" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="14" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="15" ListVariableOp="Join" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="16" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_.*_计数" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="17" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableIndex="1" VariableOp="UnsetRegex" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="18" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*_合并" VariableOp="UnsetRegex" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="19" ActionType="Placeholder" Description="5" DescriptionOverride="True">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="20" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_id_.*" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="21" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_.*" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="22" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_${tid}" ListVariableExpression="、" ListVariableTarget="正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_.*" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="23" ListVariableOp="Push" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_.*_计数" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="24" ListVariableOp="Push" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_精确检查_玩家_.*" VariableExpression="${tid}" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="25" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_记录暂存_id" ListVariableExpression="${tid}" ListVariableIndex="1" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="26" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_.*" ListVariableExpression="检测为玩家:[${_ffxiventity[${tid}].name}] 触发，生成了 ${lvar:正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}_计数} 只怪物《${var:正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}}》。 《此结果仅供参考！》" ListVariableIndex="1" ActionType="ListVariable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+              <Folder Id="41cbd52a-fcad-4269-ac68-ca4994a9bbba" Name="快速切换" Enabled="true">
+                <Folders>
+                  <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(156|1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124|153|561|562|563|564|565|570|593|594|595|596|597|598|599|600|601|602|603|604|605|606|607|613|770|771|772|773|774|775|780|782|783|784|785)$" Id="5185e2f2-c803-4ade-9e63-2f3f58e22f21" Name="内部" Enabled="true">
+                    <Folders />
+                    <Triggers>
+                      <Trigger Enabled="true" Sequential="True" Name="SWITCH" Id="021614be-b6d1-43b5-a4dc-8606e3799a6d" RegularExpression="^.{14} ChatLog 00:0038::s(?&lt;type&gt;(0|1|2))$" Scheduling="FromLastAction">
+                        <Actions>
+                          <Action OrderNumber="1" ActionType="Placeholder" Asynchronous="False" Description="切换为 调试模式" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" TriggerOp="EnableTrigger" TriggerId="9c3f6245-ea9a-4cda-9690-6510940f57c1" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" TriggerOp="DisableTrigger" TriggerId="c6099bab-24df-4db3-b754-3b78ed401ecf" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="4" TriggerOp="EnableTrigger" TriggerId="03056b27-dc36-4b4b-af87-4a3f85c52c3c" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="5" TriggerOp="EnableTrigger" TriggerId="d558da0f-867a-4b92-84b6-00f1f191cad8" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/e 轮椅功能切换到调试模式执行完毕！(小队模式+播报同时默语小队)&lt;se.9&gt;" ActionType="NamedCallback" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="7" ActionType="Placeholder" Asynchronous="False" Description="切换为 小队模式" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" TriggerOp="EnableTrigger" TriggerId="9c3f6245-ea9a-4cda-9690-6510940f57c1" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="9" TriggerOp="DisableTrigger" TriggerId="c6099bab-24df-4db3-b754-3b78ed401ecf" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="10" TriggerOp="EnableTrigger" TriggerId="03056b27-dc36-4b4b-af87-4a3f85c52c3c" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="11" TriggerOp="DisableTrigger" TriggerId="d558da0f-867a-4b92-84b6-00f1f191cad8" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="12" NamedCallbackName="command" NamedCallbackParam="/e 轮椅功能切换到小队模式执行完毕！&lt;se.9&gt;" ActionType="NamedCallback" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="13" ActionType="Placeholder" Asynchronous="False" Description="切换为 个人模式" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="14" TriggerOp="EnableTrigger" TriggerId="c6099bab-24df-4db3-b754-3b78ed401ecf" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="15" TriggerOp="DisableTrigger" TriggerId="9c3f6245-ea9a-4cda-9690-6510940f57c1" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="16" TriggerOp="EnableTrigger" TriggerId="d558da0f-867a-4b92-84b6-00f1f191cad8" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="17" TriggerOp="DisableTrigger" TriggerId="03056b27-dc36-4b4b-af87-4a3f85c52c3c" ActionType="Trigger" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="18" NamedCallbackName="command" NamedCallbackParam="/e 轮椅功能切换到个人模式执行完毕！&lt;se.16&gt;" ActionType="NamedCallback" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                    </Triggers>
+                  </Folder>
+                </Folders>
+                <Triggers>
+                  <Trigger Enabled="true" Sequential="True" Name="1. 进入副本" Id="9c1a51df-6cd0-4437-b95b-520aa87bb83e" RegularExpression="^.{14} Territory 01:(44B|44C|44D|44E|44F|450|451|452|453|454|464|231|232|233|234|235|23A|251|252|253|254|255|256|257|258|259|25A|25B|25C|25D|25E|25F|302|303|304|305|306|307|30C|30E|30F|310|311):(?&lt;ditu&gt;.*)">
+                    <Actions>
+                      <Action OrderNumber="1" VariableName="正统优雷卡_快速切换_播报状态" VariableExpression="1" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e 欢迎使用正统优雷卡播报轮椅功能！此信息将在进入副本后进行播报，进入深层迷宫进入区域时重置播报。" ActionType="NamedCallback" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 如果队伍内有多名玩家使用了所有人可见的功能产生重复播报，您可以输入命令快速切换为个人模式，所有内容将仅自己可见。" ActionType="NamedCallback" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/e 此默语检测仅在 3 个深层迷宫进入区域与深层迷宫副本区域内生效！" ActionType="NamedCallback" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/e 切换为小队模式: /e s1" ActionType="NamedCallback" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/e 切换为个人模式: /e s2" ActionType="NamedCallback" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_快速切换_播报状态}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="2. 进入摩杜纳/黑衣森林南部林区/红玉海" Id="76cccec9-1abf-4609-9c31-8fdf5f65c329" RegularExpression="^.{14} Territory 01:(9C|99|265):(?&lt;ditu&gt;.*)">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="正统优雷卡_快速切换_播报状态" VariableExpression="1" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
             <Triggers>
-              <Trigger Enabled="true" Name="1.2 铜宝箱拟态怪信息处理+推送标记 - 所有人可见 [ 二选一 ]" Id="32b3c678-280a-4a2d-af9e-301174b9b0b9" RegularExpression="^.{14} 261 105:Add:(?&lt;id&gt;[^:]*):(?:AggressionStatus(?:$|:)(?&lt;pairAggressionStatus&gt;[^:]*)(?:$|:))?(?:BNpcID(?:$|:)(1E9C04)(?:$|:))" Scheduling="FromLastAction">
+              <Trigger Enabled="true" Name="1. 初始化 - 进入副本" Id="c6dae2aa-eb1e-4e79-a140-04ff3023268b" RegularExpression="^.{14} Territory 01:(44B|44C|44D|44E|44F|450|451|452|453|454|464|231|232|233|234|235|23A|251|252|253|254|255|256|257|258|259|25A|25B|25C|25D|25E|25F|302|303|304|305|306|307|30C|30E|30F|310|311):(?&lt;ditu&gt;.*)">
                 <Actions>
-                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ListVariableExpression="${id}" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="1" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="1500" Asynchronous="False">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="3" NamedCallbackName="mark" NamedCallbackParam="{&#xD;&#xA;&quot;ActorID&quot;: 0x${id},&#xD;&#xA;  &quot;MarkType&quot;: &quot;attack${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}&quot;&#xD;&#xA;}" ActionType="NamedCallback" Asynchronous="False">
+                  <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="正统优雷卡_精英怪提醒_精英怪_当前.*" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" LogMessageText="正统优雷卡_默语频道_Clone:检测到铜宝箱拟态怪[${id}]，已发送标记，请勿触摸。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
+                  <Action OrderNumber="3" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="5" LogMessageText="正统优雷卡_小队频道_Clone:检测到铜宝箱拟态怪[${id}]，已发送标记，请勿触摸。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
+                  <Action OrderNumber="4" ActionType="Placeholder" Description="2" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}+1" ActionType="Variable" Asynchronous="False">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="NumericLess" />
-                    </Condition>
+                  <Action OrderNumber="5" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_妨碍陷阱.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_爆炸陷阱.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" ActionType="Placeholder" Description="3" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" ActionType="Placeholder" Description="4" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" ListVariableOp="Join" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="16" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_.*_计数" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="17" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableIndex="1" VariableOp="UnsetRegex" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="18" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*_合并" VariableOp="UnsetRegex" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="40.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                  <ConditionSingle Enabled="true" ExpressionL="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ExpressionTypeL="String" ExpressionR="${id}" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
-                </Condition>
+                <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="false" Name="1.1 铜宝箱拟态怪信息处理+推送标记 - 仅自己可见 [ 二选一 ]" Id="03c1cd29-18a1-4f5f-88c4-8fb682900407" RegularExpression="^.{14} 261 105:Add:(?&lt;id&gt;[^:]*):(?:AggressionStatus(?:$|:)(?&lt;pairAggressionStatus&gt;[^:]*)(?:$|:))?(?:BNpcID(?:$|:)(1E9C04)(?:$|:))" Scheduling="FromLastAction">
+              <Trigger Enabled="true" Name="2. 初始化 - 进入摩杜纳/黑衣森林南部林区/红玉海" Id="c3161b41-ba0d-420f-9413-fb5fd4f97926" RegularExpression="^.{14} Territory 01:(9C|99|265):(?&lt;ditu&gt;.*)">
                 <Actions>
-                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ListVariableExpression="${id}" ActionType="ListVariable" Asynchronous="False">
+                  <Action OrderNumber="1" ActionType="Placeholder" Description="1" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="1500" Asynchronous="False">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="3" NamedCallbackName="mark" NamedCallbackParam="{&#xD;&#xA;&quot;ActorID&quot;: 0x${id},&#xD;&#xA;  &quot;MarkType&quot;: &quot;attack${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}&quot;,  &quot;LocalOnly&quot;: true &#xD;&#xA;}" ActionType="NamedCallback" Asynchronous="False">
+                  <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="正统优雷卡_精英怪提醒_精英怪_当前.*" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" LogMessageText="正统优雷卡_默语频道_Clone:检测到铜宝箱拟态怪[${id}]，已发送标记，请勿触摸。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
+                  <Action OrderNumber="3" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" ActionType="Variable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}+1" ActionType="Variable" Asynchronous="False">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="NumericLess" />
-                    </Condition>
+                  <Action OrderNumber="4" ActionType="Placeholder" Description="2" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_妨碍陷阱.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_爆炸陷阱.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="7" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="8" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="9" ActionType="Placeholder" Description="3" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="11" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="12" ActionType="Placeholder" Description="4" DescriptionOverride="True">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="13" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="14" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="15" ListVariableOp="Join" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="16" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_.*_计数" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="17" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableIndex="1" VariableOp="UnsetRegex" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="18" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*_合并" VariableOp="UnsetRegex" ActionType="ListVariable">
+                    <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
-                <Condition Enabled="true" Grouping="And">
-                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="40.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                  <ConditionSingle Enabled="true" ExpressionL="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ExpressionTypeL="String" ExpressionR="${id}" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
-                </Condition>
+                <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124|561|562|563|564|565|570|593|594|595|596|597|598|599|600|601|602|603|604|605|606|607|770|771|772|773|774|775|780|782|783|784|785)$" Id="21f240ff-acc4-4749-9c33-2804dad1edd3" Name="2. 谁踩了陷阱？说话说话！" Enabled="true">
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124)$" Id="de10eb85-63dc-4369-bc53-19b71ccaa4a4" Name="1. 精英怪提醒" Enabled="true">
             <Folders>
-              <Folder Id="98143187-c676-43c5-8478-200baec1c6d2" Name="1. 妨碍陷阱" Enabled="true">
+              <Folder Id="272bcb4e-03c4-4639-b90b-1a59aef4cc8c" Name="精英怪类型检查" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 触发" Id="2c7bafae-6ce1-4a84-8259-12dcd6843738" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1886:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
+                  <Trigger Enabled="true" Name="1. 获取精英怪刷新信息" Id="73dcf801-7202-4d45-a00a-03f953a8d83f" RegularExpression="^.{14} AddCombatant 03:(?&lt;id&gt;[^:]*):(?&lt;name&gt;(亚灵智慧之灵|美拉西迪亚复制体|拉米亚女王)):(?&lt;job&gt;[^:]*):(?&lt;level&gt;[^:]*):(?&lt;ownerId&gt;[^:]*):(?&lt;worldId&gt;[^:]*):(?&lt;world&gt;[^:]*):(?&lt;npcNameId&gt;[^:]*):(?&lt;npcBaseId&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;hp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;mp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*)(?:$|:)">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="正统优雷卡_精英怪提醒_精英怪_当前_name" VariableExpression="${name}" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" VariableOp="SetString" VariableName="正统优雷卡_精英怪提醒_精英怪_当前_id" VariableExpression="${id}" ActionType="Variable">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="40.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Sequential="True" Name="3. 补偿检查精英怪" Id="d4459418-275b-4499-b3c3-d9043f46e347" RegularExpression="^.{14} AddCombatant 03:(?&lt;id&gt;[^:]*):(?&lt;name&gt;(亚灵智慧之灵|美拉西迪亚复制体|拉米亚女王)):(?&lt;job&gt;[^:]*):(?&lt;level&gt;[^:]*):(?&lt;ownerId&gt;[^:]*):(?&lt;worldId&gt;[^:]*):(?&lt;world&gt;[^:]*):(?&lt;npcNameId&gt;[^:]*):(?&lt;npcBaseId&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;hp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;mp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*)(?:$|:)">
+                    <Actions>
+                      <Action OrderNumber="1" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" ActionType="Variable" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="2" LogMessageText="正统优雷卡_默语频道_Clone:检测到精英怪 → [${name}]。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                      <Action OrderNumber="3" LogMessageText="正统优雷卡_小队频道_Clone:检测到精英怪 → [${name}]。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
+                        <Condition Enabled="false" Grouping="Or" />
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="40.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_精英怪获取补偿}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Trigger>
+                  <Trigger Enabled="true" Name="2. 精英怪不在初始房加载范围内" Id="4ff3b27b-0d37-4cd0-8159-cb6232d9dd45" RegularExpression="^.{14} ChatLog 00:0839::能够感受到强大魔物的气息……$">
+                    <Actions>
+                      <Action OrderNumber="1" VariableOp="SetString" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" VariableExpression="1" ActionType="Variable">
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                        </Condition>
+                      </Action>
+                    </Actions>
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Trigger>
+                </Triggers>
+              </Folder>
+            </Folders>
+            <Triggers>
+              <Trigger Enabled="true" Name="强大魔物提醒 TTS" Id="299d0e35-fa3a-4c67-a113-a777f91a8a1b" RegularExpression="^.{14} ChatLog 00:0839::能够感受到强大魔物的气息……$">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="本层有精英怪" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="强大魔物提醒 聊天播报" Id="94d483e9-1a2f-4cb6-8b5a-1ebcd65dc811" RegularExpression="^.{14} ChatLog 00:0839::能够感受到强大魔物的气息……$">
+                <Actions>
+                  <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:本层有精英怪 → [${var:正统优雷卡_精英怪提醒_精英怪_当前_name}] &lt;se.2&gt;" LogProcess="True" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" LogMessageText="正统优雷卡_小队频道_Clone:本层有精英怪 → [${var:正统优雷卡_精英怪提醒_精英怪_当前_name}] &lt;se.2&gt;" LogProcess="True" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" LogMessageText="正统优雷卡_默语频道_Clone:本层有精英怪 → 未检测到，您需要接近精英怪以获取信息。&lt;se.2&gt;" LogProcess="True" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="4" LogMessageText="正统优雷卡_小队频道_Clone:本层有精英怪 → 未检测到，您需要接近精英怪以获取信息。&lt;se.2&gt;" LogProcess="True" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124|561|562|563|564|565|570|593|594|595|596|597|598|599|600|601|602|603|604|605|606|607|770|771|772|773|774|775|780|782|783|784|785)$" Id="5ef02a26-11c3-47e3-97d2-efc9cb9e6616" Name="2. 谁踩了陷阱？说话说话！" Enabled="true">
+            <Folders>
+              <Folder Id="e1c25c54-5abb-471b-adbf-2d3b80481e59" Name="1. 妨碍陷阱" Enabled="true">
+                <Folders />
+                <Triggers>
+                  <Trigger Enabled="true" Name="1. 触发" Id="f3d5e750-8fa4-4607-89c7-d0d5f8f689e2" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1886:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" ActionType="Placeholder" Asynchronous="False" Description="记录相关信息" DescriptionOverride="True">
                         <Condition Enabled="false" Grouping="Or" />
@@ -172,7 +578,7 @@
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="2. 结算" Id="aa0a41a4-8795-46f8-9942-cb9290a89c8d" RegularExpression="^正统优雷卡_陷阱检查_妨碍陷阱_结果:(?&lt;type&gt;.+?):(?&lt;sid&gt;.+?)$">
+                  <Trigger Enabled="true" Name="2. 结算" Id="9294fc53-8968-411e-9f0d-f64ae0ff2534" RegularExpression="^正统优雷卡_陷阱检查_妨碍陷阱_结果:(?&lt;type&gt;.+?):(?&lt;sid&gt;.+?)$">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:玩家:[${var:正统优雷卡_陷阱检查_妨碍陷阱_触发者name_${sid}}]《最近玩家》 触发了妨碍陷阱。" LogProcess="True" ActionType="LogMessage">
                         <Condition Enabled="true" Grouping="Or">
@@ -220,10 +626,10 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="0b2093d8-d548-49ed-9655-5e27e5c1a8f2" Name="2. 爆炸陷阱" Enabled="true">
+              <Folder Id="ce1ff38b-9a29-4cfe-8e4c-ede2158a80c3" Name="2. 爆炸陷阱" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 触发" Id="e48fbab5-a0b8-4a5a-8d85-20221b46d398" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1883:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
+                  <Trigger Enabled="true" Name="1. 触发" Id="f96f6540-8203-4e3d-ab99-098668c4210c" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1883:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetString" VariableName="正统优雷卡_陷阱检查_爆炸陷阱_触发怪物id_${sid}" VariableExpression="${sid}" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="And">
@@ -290,7 +696,7 @@
                     <Condition Enabled="false" Grouping="Or" />
                     <Conditions />
                   </Trigger>
-                  <Trigger Enabled="true" Name="2. 结算" Id="35c45ed4-786e-4f37-b71e-4e1b1e2dcf21" RegularExpression="^正统优雷卡_陷阱检查_爆炸陷阱_结果:(?&lt;type&gt;.+?):(?&lt;sid&gt;.+?)$">
+                  <Trigger Enabled="true" Name="2. 结算" Id="cbe0032a-9e8f-4292-b737-af15a52a5078" RegularExpression="^正统优雷卡_陷阱检查_爆炸陷阱_结果:(?&lt;type&gt;.+?):(?&lt;sid&gt;.+?)$">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:玩家:[${var:正统优雷卡_陷阱检查_爆炸陷阱_触发者name_${sid}}]《最近玩家》 触发了爆炸陷阱。" LogProcess="True" ActionType="LogMessage">
                         <Condition Enabled="true" Grouping="Or">
@@ -338,10 +744,10 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="8a49db79-05bc-40e6-8fef-a6b1e837112d" Name="3. 猫头小鹰陷阱" Enabled="true">
+              <Folder Id="c524e35d-ce93-4e61-816c-03cdd34c5470" Name="3. 猫头小鹰陷阱" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 触发" Id="0ecfd0ca-5959-4ea7-b610-50b2f011d3c5" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):7E77:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
+                  <Trigger Enabled="true" Name="1. 触发" Id="10c62fb3-6939-4c20-b136-76c2ff66aee0" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):7E77:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:玩家:[${tname}] 触发了猫头小鹰陷阱。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
@@ -355,10 +761,10 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="fa01554f-9900-4a12-9678-d2710195b9fc" Name="4. 弱化陷阱" Enabled="true">
+              <Folder Id="3f3917dc-0015-41ec-adc1-551efd475abb" Name="4. 弱化陷阱" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 触发" Id="226dccb4-5cb0-4d33-8b58-04f62bfe6b1b" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1885:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
+                  <Trigger Enabled="true" Name="1. 触发" Id="a2848ae6-2319-4356-bc19-7b96d29a24a6" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1885:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:玩家:[${tname}] 触发了弱化陷阱。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
@@ -372,10 +778,10 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="da1a820d-9069-42ce-95dc-7dde8c4f1f22" Name="EX. 炸弹银宝箱" Enabled="true">
+              <Folder Id="e68d2877-8748-416c-b597-9d8270d0ab4a" Name="EX. 炸弹银宝箱" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Sequential="True" Name="1. 触发" Id="9b530639-48c2-486e-85c4-a1c77c6060af" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):188C:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
+                  <Trigger Enabled="true" Sequential="True" Name="1. 触发" Id="09e30080-8c6a-4f87-b5df-88343ff962ef" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):188C:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" VariableOp="SetString" VariableName="正统优雷卡_陷阱检查_银宝箱_伤害源_${sid}" VariableExpression="${sid}" ActionType="Variable" Asynchronous="False">
                         <Condition Enabled="true" Grouping="Or">
@@ -406,14 +812,14 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="6d981727-ba42-4b99-b32a-b36066727dd4" Name="5. 诱饵陷阱" Enabled="true">
+              <Folder Id="c16c56f2-c906-468b-b750-9847896bd0c0" Name="5. 诱饵陷阱" Enabled="true">
                 <Folders>
-                  <Folder Id="7cee2907-90f3-4691-8ca8-abb09c9bcbd2" Name="谁踩了诱饵？(近似检查)" Enabled="true">
+                  <Folder Id="618fa372-3b6e-499e-b84a-54689ab37855" Name="谁踩了诱饵？(请安装MoreLogLine并启用所有监听，如未安装则默认为近似检查)" Enabled="true">
                     <Folders>
-                      <Folder Id="e1ec6f03-6474-414a-8b3f-e011ac983a43" Name="DEBUG" Enabled="true">
+                      <Folder Id="42572c9c-b972-49e4-a88f-1c010c4e2256" Name="DEBUG" Enabled="true">
                         <Folders />
                         <Triggers>
-                          <Trigger Enabled="false" Name="触发1" Id="ca10fc99-3590-47a4-a819-46805e6ebaeb" RegularExpression="">
+                          <Trigger Enabled="false" Name="触发1" Id="d4d0beb9-163c-4a03-81b2-5eaf34ee456f" RegularExpression="">
                             <Actions>
                               <Action OrderNumber="1" LogMessageText="[17:17:43.000] ChatLog 00:0839::触发了诱饵陷阱……" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000">
                                 <Condition Enabled="false" Grouping="Or" />
@@ -427,9 +833,24 @@
                             <Condition Enabled="false" Grouping="Or" />
                             <Conditions />
                           </Trigger>
-                          <Trigger Enabled="false" Name="触发2" Id="bdf8db9e-65d2-4b30-857a-b786bdf959ad" RegularExpression="">
+                          <Trigger Enabled="false" Name="触发2" Id="23bfb8c4-78b3-4cd9-8754-96c4ddc4925f" RegularExpression="">
                             <Actions>
                               <Action OrderNumber="1" LogMessageText="[17:17:43.926] ActionEffect 15:40005E0C:陷阱:1884:诱饵陷阱:E0000000::0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:0:::::::::::268:268:0:10000:::373.22:-341.69:0.00:0.00:00001D75:0:0" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000" />
+                            </Actions>
+                            <Condition Enabled="false" Grouping="Or" />
+                            <Conditions />
+                          </Trigger>
+                          <Trigger Enabled="false" Name="触发 摩洛哥" Id="3a8c2840-8f83-4e34-96bf-a1493aecbe0e" RegularExpression="">
+                            <Actions>
+                              <Action OrderNumber="1" LogMessageText="[19:48:42.380] ChatLog 00:0:107:40006F5E::10133000:5772:4980:E0000000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="2" LogMessageText="[19:48:42.378] ChatLog 00:0:107:40006F5D::10133000:5773:4981:E0000000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
+                              <Action OrderNumber="3" LogMessageText="[19:48:42.377] ChatLog 00:0:107:40006F5C::10133000:5777:4985:E0000000" LogProcess="True" ActionType="LogMessage" ExecutionDelayExpression="0.0 * 1000">
+                                <Condition Enabled="false" Grouping="Or" />
+                              </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
                             <Conditions />
@@ -438,12 +859,12 @@
                       </Folder>
                     </Folders>
                     <Triggers>
-                      <Trigger Enabled="true" Sequential="True" Name="2. 储存信息" Id="22b809fa-5de1-4d71-bdd4-9becd27fb54d" RegularExpression="^.{14} 261 105:Add:(?&lt;id&gt;[^:]*):(?:AggressionStatus(?:$|:)(?&lt;pairAggressionStatus&gt;[^:]*)(?:$|:))?(?:BNpcID(?:$|:)(?&lt;pairBNpcID&gt;[^:]*)(?:$|:))?(?:BNpcNameID(?:$|:)(?&lt;pairBNpcNameID&gt;[^:]*)(?:$|:))?(?:CastBuffID(?:$|:)(?&lt;pairCastBuffID&gt;[^:]*)(?:$|:))?(?:CastDurationCurrent(?:$|:)(?&lt;pairCastDurationCurrent&gt;[^:]*)(?:$|:))?(?:CastDurationMax(?:$|:)(?&lt;pairCastDurationMax&gt;[^:]*)(?:$|:))?(?:CastGroundTargetX(?:$|:)(?&lt;pairCastGroundTargetX&gt;[^:]*)(?:$|:))?(?:CastGroundTargetY(?:$|:)(?&lt;pairCastGroundTargetY&gt;[^:]*)(?:$|:))?(?:CastGroundTargetZ(?:$|:)(?&lt;pairCastGroundTargetZ&gt;[^:]*)(?:$|:))?(?:CastTargetID(?:$|:)(?&lt;pairCastTargetID&gt;[^:]*)(?:$|:))?(?:CurrentCP(?:$|:)(?&lt;pairCurrentCP&gt;[^:]*)(?:$|:))?(?:CurrentGP(?:$|:)(?&lt;pairCurrentGP&gt;[^:]*)(?:$|:))?(?:CurrentHP(?:$|:)(?&lt;pairCurrentHP&gt;[^:]*)(?:$|:))?(?:CurrentMP(?:$|:)(?&lt;pairCurrentMP&gt;[^:]*)(?:$|:))?(?:CurrentWorldID(?:$|:)(?&lt;pairCurrentWorldID&gt;[^:]*)(?:$|:))?(?:Distance(?:$|:)(?&lt;pairDistance&gt;[^:]*)(?:$|:))?(?:EffectiveDistance(?:$|:)(?&lt;pairEffectiveDistance&gt;[^:]*)(?:$|:))?(?:Heading(?:$|:)(?&lt;pairHeading&gt;[^:]*)(?:$|:))?(?:ID(?:$|:)(?&lt;pairID&gt;[^:]*)(?:$|:))?(?:IsCasting1(?:$|:)(?&lt;pairIsCasting1&gt;[^:]*)(?:$|:))?(?:IsCasting2(?:$|:)(?&lt;pairIsCasting2&gt;[^:]*)(?:$|:))?(?:IsTargetable(?:$|:)(?&lt;pairIsTargetable&gt;[^:]*)(?:$|:))?(?:Job(?:$|:)(?&lt;pairJob&gt;[^:]*)(?:$|:))?(?:Level(?:$|:)(?&lt;pairLevel&gt;[^:]*)(?:$|:))?(?:MaxCP(?:$|:)(?&lt;pairMaxCP&gt;[^:]*)(?:$|:))?(?:MaxGP(?:$|:)(?&lt;pairMaxGP&gt;[^:]*)(?:$|:))?(?:MaxHP(?:$|:)(?&lt;pairMaxHP&gt;[^:]*)(?:$|:))?(?:MaxMP(?:$|:)(?&lt;pairMaxMP&gt;[^:]*)(?:$|:))?(?:ModelStatus(?:$|:)(?&lt;pairModelStatus&gt;[^:]*)(?:$|:))?(?:MonsterType(?:$|:)(?&lt;pairMonsterType&gt;[^:]*)(?:$|:))?(?:Name(?:$|:)(?&lt;pairName&gt;[^:]*)(?:$|:))?(?:NPCTargetID(?:$|:)(?&lt;pairNPCTargetID&gt;[^:]*)(?:$|:))?(?:OwnerID(?:$|:)(?&lt;pairOwnerID&gt;[^:]*)(?:$|:))?(?:PartyType(?:$|:)(?&lt;pairPartyType&gt;[^:]*)(?:$|:))?(?:PCTargetID(?:$|:)(?&lt;pairPCTargetID&gt;[^:]*)(?:$|:))?(?:PosX(?:$|:)(?&lt;pairPosX&gt;[^:]*)(?:$|:))?(?:PosY(?:$|:)(?&lt;pairPosY&gt;[^:]*)(?:$|:))?(?:PosZ(?:$|:)(?&lt;pairPosZ&gt;[^:]*)(?:$|:))?(?:Radius(?:$|:)(?&lt;pairRadius&gt;[^:]*)(?:$|:))?(?:Status(?:$|:)(?&lt;pairStatus&gt;[^:]*)(?:$|:))?(?:TargetID(?:$|:)(?&lt;pairTargetID&gt;[^:]*)(?:$|:))?(?:TransformationId(?:$|:)(?&lt;pairTransformationId&gt;[^:]*)(?:$|:))?(?:Type(?:$|:)(?&lt;pairType&gt;[^:]*)(?:$|:))?(?:WeaponId(?:$|:)(?&lt;pairWeaponId&gt;[^:]*)(?:$|:))?(?:WorldID(?:$|:)(?&lt;pairWorldID&gt;[^:]*)(?:$|:))?(?:WorldName(?:$|:)(?&lt;pairWorldName&gt;[^:]*)(?:$|:))?(?:$|:)">
+                      <Trigger Enabled="true" Sequential="True" Name="2. 储存信息 OverlayPlugin" Id="7d625e11-86c7-4ba8-81c8-444fc7de1c44" RegularExpression="^.{14} 261 105:Add:(?&lt;id&gt;[^:]*):(?:AggressionStatus(?:$|:)(?&lt;pairAggressionStatus&gt;[^:]*)(?:$|:))?(?:BNpcID(?:$|:)(?&lt;pairBNpcID&gt;[^:]*)(?:$|:))?(?:BNpcNameID(?:$|:)(?&lt;pairBNpcNameID&gt;[^:]*)(?:$|:))?(?:CastBuffID(?:$|:)(?&lt;pairCastBuffID&gt;[^:]*)(?:$|:))?(?:CastDurationCurrent(?:$|:)(?&lt;pairCastDurationCurrent&gt;[^:]*)(?:$|:))?(?:CastDurationMax(?:$|:)(?&lt;pairCastDurationMax&gt;[^:]*)(?:$|:))?(?:CastGroundTargetX(?:$|:)(?&lt;pairCastGroundTargetX&gt;[^:]*)(?:$|:))?(?:CastGroundTargetY(?:$|:)(?&lt;pairCastGroundTargetY&gt;[^:]*)(?:$|:))?(?:CastGroundTargetZ(?:$|:)(?&lt;pairCastGroundTargetZ&gt;[^:]*)(?:$|:))?(?:CastTargetID(?:$|:)(?&lt;pairCastTargetID&gt;[^:]*)(?:$|:))?(?:CurrentCP(?:$|:)(?&lt;pairCurrentCP&gt;[^:]*)(?:$|:))?(?:CurrentGP(?:$|:)(?&lt;pairCurrentGP&gt;[^:]*)(?:$|:))?(?:CurrentHP(?:$|:)(?&lt;pairCurrentHP&gt;[^:]*)(?:$|:))?(?:CurrentMP(?:$|:)(?&lt;pairCurrentMP&gt;[^:]*)(?:$|:))?(?:CurrentWorldID(?:$|:)(?&lt;pairCurrentWorldID&gt;[^:]*)(?:$|:))?(?:Distance(?:$|:)(?&lt;pairDistance&gt;[^:]*)(?:$|:))?(?:EffectiveDistance(?:$|:)(?&lt;pairEffectiveDistance&gt;[^:]*)(?:$|:))?(?:Heading(?:$|:)(?&lt;pairHeading&gt;[^:]*)(?:$|:))?(?:ID(?:$|:)(?&lt;pairID&gt;[^:]*)(?:$|:))?(?:IsCasting1(?:$|:)(?&lt;pairIsCasting1&gt;[^:]*)(?:$|:))?(?:IsCasting2(?:$|:)(?&lt;pairIsCasting2&gt;[^:]*)(?:$|:))?(?:IsTargetable(?:$|:)(?&lt;pairIsTargetable&gt;[^:]*)(?:$|:))?(?:Job(?:$|:)(?&lt;pairJob&gt;[^:]*)(?:$|:))?(?:Level(?:$|:)(?&lt;pairLevel&gt;[^:]*)(?:$|:))?(?:MaxCP(?:$|:)(?&lt;pairMaxCP&gt;[^:]*)(?:$|:))?(?:MaxGP(?:$|:)(?&lt;pairMaxGP&gt;[^:]*)(?:$|:))?(?:MaxHP(?:$|:)(?&lt;pairMaxHP&gt;[^:]*)(?:$|:))?(?:MaxMP(?:$|:)(?&lt;pairMaxMP&gt;[^:]*)(?:$|:))?(?:ModelStatus(?:$|:)(?&lt;pairModelStatus&gt;[^:]*)(?:$|:))?(?:MonsterType(?:$|:)(?&lt;pairMonsterType&gt;[^:]*)(?:$|:))?(?:Name(?:$|:)(?&lt;pairName&gt;[^:]*)(?:$|:))?(?:NPCTargetID(?:$|:)(?&lt;pairNPCTargetID&gt;[^:]*)(?:$|:))?(?:OwnerID(?:$|:)(?&lt;pairOwnerID&gt;[^:]*)(?:$|:))?(?:PartyType(?:$|:)(?&lt;pairPartyType&gt;[^:]*)(?:$|:))?(?:PCTargetID(?:$|:)(?&lt;pairPCTargetID&gt;[^:]*)(?:$|:))?(?:PosX(?:$|:)(?&lt;pairPosX&gt;[^:]*)(?:$|:))?(?:PosY(?:$|:)(?&lt;pairPosY&gt;[^:]*)(?:$|:))?(?:PosZ(?:$|:)(?&lt;pairPosZ&gt;[^:]*)(?:$|:))?(?:Radius(?:$|:)(?&lt;pairRadius&gt;[^:]*)(?:$|:))?(?:Status(?:$|:)(?&lt;pairStatus&gt;[^:]*)(?:$|:))?(?:TargetID(?:$|:)(?&lt;pairTargetID&gt;[^:]*)(?:$|:))?(?:TransformationId(?:$|:)(?&lt;pairTransformationId&gt;[^:]*)(?:$|:))?(?:Type(?:$|:)(?&lt;pairType&gt;[^:]*)(?:$|:))?(?:WeaponId(?:$|:)(?&lt;pairWeaponId&gt;[^:]*)(?:$|:))?(?:WorldID(?:$|:)(?&lt;pairWorldID&gt;[^:]*)(?:$|:))?(?:WorldName(?:$|:)(?&lt;pairWorldName&gt;[^:]*)(?:$|:))?(?:$|:)">
                         <Actions>
                           <Action OrderNumber="1" ActionType="Placeholder" Description="这不是一个稳定的方法" DescriptionOverride="True">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" ActionType="Placeholder" Description="获取以下信息: 触发玩家、触发怪物名称、触发怪物数量(非必要)" DescriptionOverride="True">
+                          <Action OrderNumber="2" ActionType="Placeholder" Description="获取以下信息: 触发玩家、触发怪物名称、触发怪物ID、触发怪物数量(非必要)" DescriptionOverride="True">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                           <Action OrderNumber="3" VariableOp="SetString" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}" VariableExpression="${pairNPCTargetID}" ActionType="Variable" Asynchronous="False">
@@ -452,46 +873,52 @@
                           <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ListVariableExpression="${pairName}" ActionType="ListVariable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="5" ListVariableOp="Join" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ListVariableExpression="、" ListVariableTarget="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ActionType="ListVariable" Asynchronous="False">
+                          <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物id_${pairNPCTargetID}" ListVariableExpression="${id}" ActionType="ListVariable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="6" VariableOp="SetString" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_${pairNPCTargetID}_计数" VariableExpression="${lvar:正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}.size}" ActionType="Variable" Asynchronous="False">
+                          <Action OrderNumber="6" ListVariableOp="Join" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ListVariableExpression="、" ListVariableTarget="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ActionType="ListVariable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="7" ListVariableOp="Push" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableExpression="${pairNPCTargetID}" ActionType="ListVariable" Asynchronous="False">
+                          <Action OrderNumber="7" VariableOp="SetString" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_${pairNPCTargetID}_计数" VariableExpression="${lvar:正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}.size}" ActionType="Variable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="8" ActionType="Placeholder" Description="合并为列表变量 1=玩家id 2=怪物详情 3=生成数量" DescriptionOverride="True">
+                          <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableExpression="${pairNPCTargetID}" ActionType="ListVariable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="9" ListVariableOp="Set" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}_合并" ListVariableExpression="${var:正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}}" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
+                          <Action OrderNumber="9" ActionType="Placeholder" Description="合并为列表变量 1=玩家id 2=怪物详情 3=生成数量" DescriptionOverride="True">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="10" ListVariableOp="Set" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}_合并" ListVariableExpression="${var:正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}}" ListVariableIndex="2" ActionType="ListVariable" Asynchronous="False">
+                          <Action OrderNumber="10" ListVariableOp="Set" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}_合并" ListVariableExpression="${var:正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}}" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="11" ListVariableOp="Set" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}_合并" ListVariableExpression="${var:正统优雷卡_诱饵陷阱_近似计数_玩家_${pairNPCTargetID}_计数}" ListVariableIndex="3" ActionType="ListVariable" Asynchronous="False">
+                          <Action OrderNumber="11" ListVariableOp="Set" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}_合并" ListVariableExpression="${var:正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}}" ListVariableIndex="2" ActionType="ListVariable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="12" ActionType="Placeholder" Description="定期销毁信息 暂定为3秒" DescriptionOverride="True">
+                          <Action OrderNumber="12" ListVariableOp="Set" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}_合并" ListVariableExpression="${var:正统优雷卡_诱饵陷阱_近似计数_玩家_${pairNPCTargetID}_计数}" ListVariableIndex="3" ActionType="ListVariable" Asynchronous="False">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="13" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}" ActionType="Variable" ExecutionDelayExpression="3000">
+                          <Action OrderNumber="13" ActionType="Placeholder" Description="定期销毁信息 2秒" DescriptionOverride="True">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="14" ListVariableOp="Join" VariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ActionType="Variable">
+                          <Action OrderNumber="14" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}" ActionType="Variable" ExecutionDelayExpression="2000">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="15" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ListVariableExpression="${pairName}" ActionType="ListVariable">
+                          <Action OrderNumber="15" ListVariableOp="Join" VariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ActionType="Variable">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="16" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_${pairNPCTargetID}_计数" ActionType="Variable">
+                          <Action OrderNumber="16" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_${pairNPCTargetID}" ListVariableExpression="${pairName}" ActionType="ListVariable">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="17" ListVariableOp="Remove" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableIndex="1" VariableOp="UnsetRegex" ActionType="ListVariable">
+                          <Action OrderNumber="17" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物id_${pairNPCTargetID}" ListVariableExpression="${pairName}" ActionType="ListVariable">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="18" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}_合并" VariableOp="UnsetRegex" ActionType="ListVariable">
+                          <Action OrderNumber="18" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_${pairNPCTargetID}_计数" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="19" ListVariableOp="Remove" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableIndex="1" VariableOp="UnsetRegex" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="20" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_${pairNPCTargetID}_合并" VariableOp="UnsetRegex" ActionType="ListVariable">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
                         </Actions>
@@ -500,23 +927,146 @@
                         </Condition>
                         <Conditions />
                       </Trigger>
-                      <Trigger Enabled="true" Name="3. 转发日志触发" Id="cd5a1256-558d-42cd-b095-5be072a7a458" RegularExpression="^正统优雷卡_诱饵陷阱_Clone:1$">
+                      <Trigger Enabled="true" Name="4. 转发日志触发" Id="22051e44-ed84-4f5f-a3ea-6e52f0535b38" RegularExpression="^正统优雷卡_诱饵陷阱_Clone:1$">
                         <Actions>
-                          <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:可能是玩家:[${_ffxiventity[${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}].name}] 触发，生成了 ${lvar:正统优雷卡_诱饵陷阱_近似计数_玩家id_${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}_合并[3]} 只怪物《${lvar:正统优雷卡_诱饵陷阱_近似计数_玩家id_${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}_合并[2]}》。 《此结果可能有误，仅供参考！》" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                          <Action OrderNumber="1" ActionType="Placeholder" Description="近似检查结果" DescriptionOverride="True">
                             <Condition Enabled="false" Grouping="Or" />
                           </Action>
-                          <Action OrderNumber="2" LogMessageText="正统优雷卡_小队频道_Clone:可能是玩家:[${_ffxiventity[${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}].name}] 触发，生成了 ${lvar:正统优雷卡_诱饵陷阱_近似计数_玩家id_${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}_合并[3]} 只怪物《${lvar:正统优雷卡_诱饵陷阱_近似计数_玩家id_${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}_合并[2]}》。 《此结果可能有误，仅供参考！》" LogProcess="True" ActionType="LogMessage">
+                          <Action OrderNumber="2" LogMessageText="正统优雷卡_默语频道_Clone:可能是玩家:[${_ffxiventity[${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}].name}] 触发，生成了 ${lvar:正统优雷卡_诱饵陷阱_近似计数_玩家id_${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}_合并[3]} 只怪物《${lvar:正统优雷卡_诱饵陷阱_近似计数_玩家id_${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}_合并[2]}》。 《此方法为检查加载范围内最后的NPC刷新状态，根据不同情况会产生误报，此结果仅供参考！》" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="3" LogMessageText="正统优雷卡_小队频道_Clone:可能是玩家:[${_ffxiventity[${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}].name}] 触发，生成了 ${lvar:正统优雷卡_诱饵陷阱_近似计数_玩家id_${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}_合并[3]} 只怪物《${lvar:正统优雷卡_诱饵陷阱_近似计数_玩家id_${lvar:正统优雷卡_诱饵陷阱_近似计数_队列[last]}_合并[2]}》。 《此方法为检查加载范围内最后的NPC刷新状态，根据不同情况会产生误报，此结果仅供参考！》" LogProcess="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="4" ActionType="Placeholder" Description="精确检查结果" DescriptionOverride="True">
                             <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="5" LogMessageText="正统优雷卡_默语频道_Clone:${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id[1]}[1]}" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="6" LogMessageText="正统优雷卡_默语频道_Clone:${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id[2]}[1]}" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="7" LogMessageText="正统优雷卡_默语频道_Clone:${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id[3]}[1]}" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="8" LogMessageText="正统优雷卡_默语频道_Clone:${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id[4]}[1]}" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="9" LogMessageText="正统优雷卡_小队频道_Clone:${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id[1]}[1]}" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="10" LogMessageText="正统优雷卡_小队频道_Clone:${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id[2]}[1]}" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="11" LogMessageText="正统优雷卡_小队频道_Clone:${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id[3]}[1]}" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="12" LogMessageText="正统优雷卡_小队频道_Clone:${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${lvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id[4]}[1]}" LogProcess="True" LogProcessACT="True" ActionType="LogMessage">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${elvar:正统优雷卡_诱饵陷阱_精确检查_记录暂存_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
+                        <Conditions />
+                      </Trigger>
+                      <Trigger Enabled="true" Sequential="True" Name="3. 储存信息 MoreLogLine" Id="c679a9e6-d520-499e-b1cd-3473f93d41a2" RegularExpression="^.{14} ChatLog 00:0:107:(?&lt;sid&gt;.*?):(?&lt;sname&gt;.*?):(?&lt;tid&gt;.*?):(?&lt;npcbase&gt;.*?):(?&lt;npcname&gt;.*?):(?&lt;ptid&gt;.*?)">
+                        <Actions>
+                          <Action OrderNumber="1" ActionType="Placeholder" Description="数据收集" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="2" ListVariableOp="Push" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_id_${tid}" ListVariableExpression="${sid}" ActionType="ListVariable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="3" ActionType="Placeholder" Description="识别过慢，需要延迟！" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_${tid}" ListVariableExpression="${_ffxiventity[${sid}].name}" ActionType="ListVariable" ExecutionDelayExpression="200" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${sid}].name}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="5" ListVariableOp="Push" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_${tid}" ListVariableExpression="未知" ActionType="ListVariable" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${_ffxiventity[${sid}].name}" ExpressionTypeL="String" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="6" ListVariableOp="Join" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_${tid}" ListVariableExpression="、" ListVariableTarget="正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}" ActionType="ListVariable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="7" ListVariableOp="Push" VariableOp="SetString" VariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}_计数" VariableExpression="${lvar:正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_${tid}.size}" ActionType="Variable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="8" ListVariableOp="Push" VariableOp="SetString" VariableName="正统优雷卡_诱饵陷阱_精确检查_玩家_${tid}" VariableExpression="${tid}" ActionType="Variable" Asynchronous="False">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="9" ActionType="Placeholder" Description="数据暂存 引怪&gt;2判断为踩诱饵 计划踩诱饵直接发4组文本" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="10" ListVariableOp="Push" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_记录暂存_id" ListVariableExpression="${tid}" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="正统优雷卡_诱饵陷阱_精确检查_记录暂存_id" ExpressionTypeL="String" ExpressionR="${tid}" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="11" ListVariableOp="Set" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${tid}" ListVariableExpression="检测为玩家:[${_ffxiventity[${tid}].name}] 触发，生成了 ${lvar:正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_${tid}.size} 只怪物《${var:正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}}》。 《此结果仅供参考！》" ListVariableIndex="1" ActionType="ListVariable" Asynchronous="False">
+                            <Condition Enabled="true" Grouping="Or">
+                              <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}_计数}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                            </Condition>
+                          </Action>
+                          <Action OrderNumber="12" ActionType="Placeholder" Description="定期销毁信息 2秒" DescriptionOverride="True">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="13" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_id_${tid}" ActionType="ListVariable" ExecutionDelayExpression="2000">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="14" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_${tid}" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="15" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_name_${tid}" ListVariableExpression="、" ListVariableTarget="正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}" VariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="16" ListVariableOp="Push" VariableName="正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}_计数" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="17" ListVariableOp="Push" VariableName="正统优雷卡_诱饵陷阱_精确检查_玩家_${tid}" VariableExpression="${tid}" ActionType="Variable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="18" ListVariableOp="Remove" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_记录暂存_id" ListVariableExpression="${tid}" ListVariableIndex="1" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                          <Action OrderNumber="19" ListVariableName="正统优雷卡_诱饵陷阱_精确检查_记录暂存_text_${tid}" ListVariableExpression="检测为玩家:[${_ffxiventity[${tid}].name}] 触发，生成了 ${lvar:正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}_计数} 只怪物《${var:正统优雷卡_诱饵陷阱_精确检查_怪物记录_${tid}}》。 《此结果仅供参考！》" ListVariableIndex="1" ActionType="ListVariable">
+                            <Condition Enabled="false" Grouping="Or" />
+                          </Action>
+                        </Actions>
+                        <Condition Enabled="true" Grouping="Or">
+                          <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="10.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                        </Condition>
                         <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
                 </Folders>
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 触发诱饵" Id="45e90f03-7ce4-43ba-9d50-26fd15de2e86" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1884:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)" PrevActions="Interrupt" PeriodRefire="Deny">
+                  <Trigger Enabled="true" Name="1. 触发诱饵" Id="db6fc6b1-3579-436e-84ba-14bd499551ca" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1884:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)" PrevActions="Interrupt" PeriodRefire="Deny">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:检测到触发【诱饵陷阱】！ &lt;se.11&gt;" LogProcess="True" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
@@ -536,10 +1086,10 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="0cef964f-eb32-4968-907d-7f2cfde6df1c" Name="6. 蛙变陷阱" Enabled="true">
+              <Folder Id="33cde95c-55ee-4d3c-8f83-236adf8e1f91" Name="6. 蛙变陷阱" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 触发" Id="21a397bc-0f71-499c-9c1f-beafd8225b3f" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1887:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
+                  <Trigger Enabled="true" Name="1. 触发" Id="82b4c746-f5f9-482a-9b1a-710fb46e3f5c" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):1887:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:玩家:[${tname}] 触发了蛙变陷阱。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
@@ -553,10 +1103,10 @@
                   </Trigger>
                 </Triggers>
               </Folder>
-              <Folder Id="f35f3b95-eda7-4bfe-838d-46420758a2b2" Name="7. 獭獭陷阱" Enabled="true">
+              <Folder Id="6b6d7f82-6b8a-4588-a2cf-8b803f54c9cd" Name="7. 獭獭陷阱" Enabled="true">
                 <Folders />
                 <Triggers>
-                  <Trigger Enabled="true" Name="1. 触发" Id="304f8d3f-a1c4-41d0-86bc-0f2be2d959a8" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):2C17:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
+                  <Trigger Enabled="true" Name="1. 触发" Id="b6bef721-7b8e-4f21-9134-df009702f028" RegularExpression="^.{14} (?:\w+) (15|16):(?&lt;sid&gt;[^:]*):(?&lt;sname&gt;[^:]*):2C17:(?&lt;ability&gt;(?:[^:]|: )*?):(?&lt;tid&gt;[^:]*):(?&lt;tname&gt;[^:]*):(?&lt;flags&gt;[^:]*):(?&lt;damage&gt;[^:]*)(?::[^:]*){14}:(?&lt;targetCurrentHp&gt;[^:]*):(?&lt;targetMaxHp&gt;[^:]*):(?&lt;targetCurrentMp&gt;[^:]*):(?&lt;targetMaxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;targetX&gt;[^:]*):(?&lt;targetY&gt;[^:]*):(?&lt;targetZ&gt;[^:]*):(?&lt;targetHeading&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;maxHp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;maxMp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*):(?&lt;sequence&gt;[^:]*):(?&lt;targetIndex&gt;[^:]*):(?&lt;targetCount&gt;[^:]*)(?:$|:)">
                     <Actions>
                       <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:玩家:[${tname}] 触发了獭獭陷阱。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage">
                         <Condition Enabled="false" Grouping="Or" />
@@ -573,418 +1123,66 @@
             </Folders>
             <Triggers />
           </Folder>
-          <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124)$" Id="a92a1ea6-4740-4c9c-b2c1-a31ee0df999c" Name="1. 精英怪提醒" Enabled="true">
-            <Folders>
-              <Folder Id="429ce5b6-4140-4063-9e46-72da09dbf68c" Name="精英怪类型检查" Enabled="true">
-                <Folders />
-                <Triggers>
-                  <Trigger Enabled="true" Name="1. 获取精英怪刷新信息" Id="54586f97-97cd-4244-95a0-e780aea17bd6" RegularExpression="^.{14} AddCombatant 03:(?&lt;id&gt;[^:]*):(?&lt;name&gt;(亚灵智慧之灵|美拉西迪亚复制体|拉米亚女王)):(?&lt;job&gt;[^:]*):(?&lt;level&gt;[^:]*):(?&lt;ownerId&gt;[^:]*):(?&lt;worldId&gt;[^:]*):(?&lt;world&gt;[^:]*):(?&lt;npcNameId&gt;[^:]*):(?&lt;npcBaseId&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;hp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;mp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*)(?:$|:)">
-                    <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="正统优雷卡_精英怪提醒_精英怪_当前_name" VariableExpression="${name}" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" VariableOp="SetString" VariableName="正统优雷卡_精英怪提醒_精英怪_当前_id" VariableExpression="${id}" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="40.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                    <Conditions />
-                  </Trigger>
-                  <Trigger Enabled="true" Name="3. 补偿检查精英怪" Id="e569109a-7379-4ec9-89ac-f87a23ebf5ad" RegularExpression="^.{14} AddCombatant 03:(?&lt;id&gt;[^:]*):(?&lt;name&gt;(亚灵智慧之灵|美拉西迪亚复制体|拉米亚女王)):(?&lt;job&gt;[^:]*):(?&lt;level&gt;[^:]*):(?&lt;ownerId&gt;[^:]*):(?&lt;worldId&gt;[^:]*):(?&lt;world&gt;[^:]*):(?&lt;npcNameId&gt;[^:]*):(?&lt;npcBaseId&gt;[^:]*):(?&lt;currentHp&gt;[^:]*):(?&lt;hp&gt;[^:]*):(?&lt;currentMp&gt;[^:]*):(?&lt;mp&gt;[^:]*)(?::[^:]*){2}:(?&lt;x&gt;[^:]*):(?&lt;y&gt;[^:]*):(?&lt;z&gt;[^:]*):(?&lt;heading&gt;[^:]*)(?:$|:)">
-                    <Actions>
-                      <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:检测到精英怪 → [${name}]。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" LogMessageText="正统优雷卡_小队频道_Clone:检测到精英怪 → [${name}]。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="3" VariableName="${var:正统优雷卡_精英怪提醒_精英怪获取补偿}" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="40.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_精英怪获取补偿}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                    <Conditions />
-                  </Trigger>
-                  <Trigger Enabled="true" Name="2. 精英怪不在初始房加载范围内" Id="1431e297-d5d4-4525-9460-973f90b76518" RegularExpression="^.{14} ChatLog 00:0839::能够感受到强大魔物的气息……$">
-                    <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" VariableExpression="1" ActionType="Variable">
-                        <Condition Enabled="true" Grouping="Or">
-                          <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        </Condition>
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Trigger>
-                </Triggers>
-              </Folder>
-            </Folders>
+          <Folder FfxivZoneFilterRegularExpression="^(1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124)$" Id="393dc6af-3971-4497-9beb-353400811ef7" Name="3. 自动标记铜宝箱拟态怪" Enabled="true">
+            <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="强大魔物提醒 TTS" Id="9aef771a-a1a6-4784-80cd-e221602db53e" RegularExpression="^.{14} ChatLog 00:0839::能够感受到强大魔物的气息……$">
+              <Trigger Enabled="true" Name="1.2 铜宝箱拟态怪信息处理+推送标记 - 所有人可见 [ 二选一 ]" Id="9c3f6245-ea9a-4cda-9690-6510940f57c1" RegularExpression="^.{14} 261 105:Add:(?&lt;id&gt;[^:]*):(?:AggressionStatus(?:$|:)(?&lt;pairAggressionStatus&gt;[^:]*)(?:$|:))?(?:BNpcID(?:$|:)(1E9C04)(?:$|:))" Scheduling="FromLastAction">
                 <Actions>
-                  <Action OrderNumber="1" UseTTSTextExpression="本层有精英怪" ActionType="UseTTS">
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ListVariableExpression="${id}" ActionType="ListVariable" Asynchronous="False">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="1500" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" NamedCallbackName="mark" NamedCallbackParam="{&#xD;&#xA;&quot;ActorID&quot;: 0x${id},&#xD;&#xA;  &quot;MarkType&quot;: &quot;attack${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}&quot;&#xD;&#xA;}" ActionType="NamedCallback" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="4" LogMessageText="正统优雷卡_默语频道_Clone:检测到铜宝箱拟态怪[${id}]，已发送标记，请勿触摸。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="5" LogMessageText="正统优雷卡_小队频道_Clone:检测到铜宝箱拟态怪[${id}]，已发送标记，请勿触摸。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}+1" ActionType="Variable" Asynchronous="False">
+                    <Condition Enabled="true" Grouping="And">
+                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="NumericLess" />
+                    </Condition>
+                  </Action>
                 </Actions>
-                <Condition Enabled="false" Grouping="Or" />
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="40.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  <ConditionSingle Enabled="true" ExpressionL="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ExpressionTypeL="String" ExpressionR="${id}" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                </Condition>
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="强大魔物提醒 聊天播报" Id="4b45b2c0-859b-493b-b1da-4a6ddb7ee571" RegularExpression="^.{14} ChatLog 00:0839::能够感受到强大魔物的气息……$">
+              <Trigger Enabled="false" Name="1.1 铜宝箱拟态怪信息处理+推送标记 - 仅自己可见 [ 二选一 ]" Id="c6099bab-24df-4db3-b754-3b78ed401ecf" RegularExpression="^.{14} 261 105:Add:(?&lt;id&gt;[^:]*):(?:AggressionStatus(?:$|:)(?&lt;pairAggressionStatus&gt;[^:]*)(?:$|:))?(?:BNpcID(?:$|:)(1E9C04)(?:$|:))" Scheduling="FromLastAction">
                 <Actions>
-                  <Action OrderNumber="1" LogMessageText="正统优雷卡_默语频道_Clone:本层有精英怪 → [${var:正统优雷卡_精英怪提醒_精英怪_当前_name}] &lt;se.2&gt;" LogProcess="True" ActionType="LogMessage">
+                  <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ListVariableExpression="${id}" ActionType="ListVariable" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable" ExecutionDelayExpression="1500" Asynchronous="False">
                     <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
                   </Action>
-                  <Action OrderNumber="2" LogMessageText="正统优雷卡_小队频道_Clone:本层有精英怪 → [${var:正统优雷卡_精英怪提醒_精英怪_当前_name}] &lt;se.2&gt;" LogProcess="True" ActionType="LogMessage">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
+                  <Action OrderNumber="3" NamedCallbackName="mark" NamedCallbackParam="{&#xD;&#xA;&quot;ActorID&quot;: 0x${id},&#xD;&#xA;  &quot;MarkType&quot;: &quot;attack${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}&quot;,  &quot;LocalOnly&quot;: true &#xD;&#xA;}" ActionType="NamedCallback" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" LogMessageText="正统优雷卡_默语频道_Clone:本层有精英怪 → 未检测到，您需要靠近精英怪以获取信息。&lt;se.2&gt;" LogProcess="True" ActionType="LogMessage">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
+                  <Action OrderNumber="4" LogMessageText="正统优雷卡_默语频道_Clone:检测到铜宝箱拟态怪[${id}]，已发送标记，请勿触摸。 &lt;se.16&gt;" LogProcess="True" ActionType="LogMessage" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" LogMessageText="正统优雷卡_小队频道_Clone:本层有精英怪 → 未检测到，您需要靠近精英怪以获取信息。&lt;se.2&gt;" LogProcess="True" ActionType="LogMessage">
+                  <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}+1" ActionType="Variable" Asynchronous="False">
                     <Condition Enabled="true" Grouping="And">
-                      <ConditionSingle Enabled="true" ExpressionL="${evar:正统优雷卡_精英怪提醒_精英怪_当前_id}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_精英怪提醒_铜拟态怪_计数}" ExpressionTypeL="String" ExpressionR="8" ExpressionTypeR="String" ConditionType="NumericLess" />
                     </Condition>
                   </Action>
                 </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Trigger>
-            </Triggers>
-          </Folder>
-          <Folder Id="56d4299e-e4e6-457a-81be-3384ec9f9eee" Name="0. 初始化" Enabled="true">
-            <Folders>
-              <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124)$" Id="60bf66f5-c602-4b79-8fbd-6a17aeaa7253" Name="内部" Enabled="true">
-                <Folders />
-                <Triggers>
-                  <Trigger Enabled="true" Name="1. 初始化 - 移动到下一层" Id="8483c649-63e8-4c63-8934-a370265cce2c" RegularExpression="^.{14} ChatLog 00:0839::成功进行了传送！$">
-                    <Actions>
-                      <Action OrderNumber="1" ActionType="Placeholder" Description="1" DescriptionOverride="True">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="正统优雷卡_精英怪提醒_精英怪_当前.*" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="3" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="4" ActionType="Placeholder" Description="2" DescriptionOverride="True">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="5" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_妨碍陷阱.*" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="6" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_爆炸陷阱.*" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="7" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="8" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="ListVariable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="9" ActionType="Placeholder" Description="3" DescriptionOverride="True">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="11" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ActionType="ListVariable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="12" ActionType="Placeholder" Description="4" DescriptionOverride="True">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="13" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="14" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="ListVariable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="15" ListVariableOp="Join" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="16" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_.*_计数" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="17" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableIndex="1" VariableOp="UnsetRegex" ActionType="ListVariable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="18" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*_合并" VariableOp="UnsetRegex" ActionType="ListVariable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Trigger>
-                </Triggers>
-              </Folder>
-              <Folder Id="b09163c7-6fb6-4bae-a2f1-47983847bf15" Name="快速切换" Enabled="true">
-                <Folders>
-                  <Folder FFXIVZoneFilterEnabled="True" FfxivZoneFilterRegularExpression="^(156|1099|1100|1101|1102|1103|1104|1105|1106|1107|1108|1124|153|561|562|563|564|565|570|593|594|595|596|597|598|599|600|601|602|603|604|605|606|607|613|770|771|772|773|774|775|780|782|783|784|785)$" Id="34f0d6f8-4a84-4271-898f-907a2457087c" Name="内部" Enabled="true">
-                    <Folders />
-                    <Triggers>
-                      <Trigger Enabled="true" Sequential="True" Name="SWITCH" Id="0a16a981-4306-475f-895f-7a519a797d8f" RegularExpression="^.{14} ChatLog 00:0038::s(?&lt;type&gt;(0|1|2))$" Scheduling="FromLastAction">
-                        <Actions>
-                          <Action OrderNumber="1" ActionType="Placeholder" Asynchronous="False" Description="切换为 调试模式" DescriptionOverride="True">
-                            <Condition Enabled="false" Grouping="Or" />
-                          </Action>
-                          <Action OrderNumber="2" TriggerOp="EnableTrigger" TriggerId="32b3c678-280a-4a2d-af9e-301174b9b0b9" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="3" TriggerOp="DisableTrigger" TriggerId="03c1cd29-18a1-4f5f-88c4-8fb682900407" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="4" TriggerOp="EnableTrigger" TriggerId="a7842f9a-f3c0-4e05-9d2d-d280190e0609" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="5" TriggerOp="EnableTrigger" TriggerId="325e8dde-cdd4-4913-8337-adc4b4a23702" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/e 轮椅功能切换到调试模式执行完毕！(小队模式+播报同时默语小队)&lt;se.9&gt;" ActionType="NamedCallback" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="0" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="7" ActionType="Placeholder" Asynchronous="False" Description="切换为 小队模式" DescriptionOverride="True">
-                            <Condition Enabled="false" Grouping="Or" />
-                          </Action>
-                          <Action OrderNumber="8" TriggerOp="EnableTrigger" TriggerId="32b3c678-280a-4a2d-af9e-301174b9b0b9" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="9" TriggerOp="DisableTrigger" TriggerId="03c1cd29-18a1-4f5f-88c4-8fb682900407" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="10" TriggerOp="EnableTrigger" TriggerId="a7842f9a-f3c0-4e05-9d2d-d280190e0609" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="11" TriggerOp="DisableTrigger" TriggerId="325e8dde-cdd4-4913-8337-adc4b4a23702" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="12" NamedCallbackName="command" NamedCallbackParam="/e 轮椅功能切换到小队模式执行完毕！&lt;se.9&gt;" ActionType="NamedCallback" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="13" ActionType="Placeholder" Asynchronous="False" Description="切换为 个人模式" DescriptionOverride="True">
-                            <Condition Enabled="false" Grouping="Or" />
-                          </Action>
-                          <Action OrderNumber="14" TriggerOp="EnableTrigger" TriggerId="03c1cd29-18a1-4f5f-88c4-8fb682900407" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="15" TriggerOp="DisableTrigger" TriggerId="32b3c678-280a-4a2d-af9e-301174b9b0b9" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="16" TriggerOp="EnableTrigger" TriggerId="325e8dde-cdd4-4913-8337-adc4b4a23702" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="17" TriggerOp="DisableTrigger" TriggerId="a7842f9a-f3c0-4e05-9d2d-d280190e0609" ActionType="Trigger" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                          <Action OrderNumber="18" NamedCallbackName="command" NamedCallbackParam="/e 轮椅功能切换到个人模式执行完毕！&lt;se.16&gt;" ActionType="NamedCallback" Asynchronous="False">
-                            <Condition Enabled="true" Grouping="Or">
-                              <ConditionSingle Enabled="true" ExpressionL="${type}" ExpressionTypeL="String" ExpressionR="2" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                            </Condition>
-                          </Action>
-                        </Actions>
-                        <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
-                      </Trigger>
-                    </Triggers>
-                  </Folder>
-                </Folders>
-                <Triggers>
-                  <Trigger Enabled="true" Sequential="True" Name="1. 进入副本" Id="112d0c75-6cab-45a1-b16e-0002b7b6ebcb" RegularExpression="^.{14} Territory 01:(44B|44C|44D|44E|44F|450|451|452|453|454|464|231|232|233|234|235|23A|251|252|253|254|255|256|257|258|259|25A|25B|25C|25D|25E|25F|302|303|304|305|306|307|30C|30E|30F|310|311):(?&lt;ditu&gt;.*)">
-                    <Actions>
-                      <Action OrderNumber="1" VariableName="正统优雷卡_快速切换_播报状态" VariableExpression="1" ActionType="Variable" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e 欢迎使用正统优雷卡播报轮椅功能！此信息将在进入副本后进行播报，进入深层迷宫进入区域时重置播报。" ActionType="NamedCallback" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 如果队伍内有多名玩家使用了所有人可见的功能产生重复播报，您可以输入命令快速切换为个人模式，所有内容将仅自己可见。" ActionType="NamedCallback" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/e 此默语检测仅在 3 个深层迷宫进入区域与深层迷宫副本区域内生效！" ActionType="NamedCallback" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/e 切换为小队模式: /e s1" ActionType="NamedCallback" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                      <Action OrderNumber="6" NamedCallbackName="command" NamedCallbackParam="/e 切换为个人模式: /e s2" ActionType="NamedCallback" Asynchronous="False">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionSingle Enabled="true" ExpressionL="${var:正统优雷卡_快速切换_播报状态}" ExpressionTypeL="String" ExpressionR="1" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                    </Condition>
-                    <Conditions />
-                  </Trigger>
-                  <Trigger Enabled="true" Name="2. 进入摩杜纳/黑衣森林南部林区/红玉海" Id="50f3058c-8656-40ed-b6a8-2b1348751e67" RegularExpression="^.{14} Territory 01:(9C|99|265):(?&lt;ditu&gt;.*)">
-                    <Actions>
-                      <Action OrderNumber="1" VariableOp="SetString" VariableName="正统优雷卡_快速切换_播报状态" VariableExpression="1" ActionType="Variable">
-                        <Condition Enabled="false" Grouping="Or" />
-                      </Action>
-                    </Actions>
-                    <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
-                  </Trigger>
-                </Triggers>
-              </Folder>
-            </Folders>
-            <Triggers>
-              <Trigger Enabled="true" Name="1. 初始化 - 进入副本" Id="32e5b8e4-575e-4cd3-8fe7-b282f5c39c9c" RegularExpression="^.{14} Territory 01:(44B|44C|44D|44E|44F|450|451|452|453|454|464|231|232|233|234|235|23A|251|252|253|254|255|256|257|258|259|25A|25B|25C|25D|25E|25F|302|303|304|305|306|307|30C|30E|30F|310|311):(?&lt;ditu&gt;.*)">
-                <Actions>
-                  <Action OrderNumber="1" ActionType="Placeholder" Description="1" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="正统优雷卡_精英怪提醒_精英怪_当前.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="3" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="4" ActionType="Placeholder" Description="2" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="5" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_妨碍陷阱.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="6" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_爆炸陷阱.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="7" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="8" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="9" ActionType="Placeholder" Description="3" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="11" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="12" ActionType="Placeholder" Description="4" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="13" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="14" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="15" ListVariableOp="Join" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="16" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_.*_计数" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="17" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableIndex="1" VariableOp="UnsetRegex" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="18" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*_合并" VariableOp="UnsetRegex" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
-              </Trigger>
-              <Trigger Enabled="true" Name="2. 初始化 - 进入摩杜纳/黑衣森林南部林区/红玉海" Id="dc614399-5471-4333-a172-672f0e3210bb" RegularExpression="^.{14} Territory 01:(9C|99|265):(?&lt;ditu&gt;.*)">
-                <Actions>
-                  <Action OrderNumber="1" ActionType="Placeholder" Description="1" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="2" VariableOp="UnsetRegex" VariableName="正统优雷卡_精英怪提醒_精英怪_当前.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="3" VariableName="正统优雷卡_精英怪提醒_精英怪获取补偿" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="4" ActionType="Placeholder" Description="2" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="5" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_妨碍陷阱.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="6" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_爆炸陷阱.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="7" VariableOp="UnsetRegex" VariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="8" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_陷阱检查_银宝箱.*" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="9" ActionType="Placeholder" Description="3" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="正统优雷卡_精英怪提醒_铜拟态怪_计数" VariableExpression="1" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="11" ListVariableName="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="12" ActionType="Placeholder" Description="4" DescriptionOverride="True">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="13" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="14" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="15" ListVariableOp="Join" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_怪物_.*" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="16" VariableOp="UnsetRegex" VariableName="正统优雷卡_诱饵陷阱_近似计数_玩家_.*_计数" ActionType="Variable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="17" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_队列" ListVariableIndex="1" VariableOp="UnsetRegex" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                  <Action OrderNumber="18" ListVariableOp="UnsetRegex" ListVariableName="正统优雷卡_诱饵陷阱_近似计数_玩家id_.*_合并" VariableOp="UnsetRegex" ActionType="ListVariable">
-                    <Condition Enabled="false" Grouping="Or" />
-                  </Action>
-                </Actions>
-                <Condition Enabled="false" Grouping="Or" />
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${id}" ExpressionTypeL="String" ExpressionR="40.{6}" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  <ConditionSingle Enabled="true" ExpressionL="正统优雷卡_精英怪提醒_铜拟态怪_记录id" ExpressionTypeL="String" ExpressionR="${id}" ExpressionTypeR="String" ConditionType="ListDoesNotContain" />
+                </Condition>
                 <Conditions />
               </Trigger>
             </Triggers>
@@ -992,77 +1190,72 @@
         </Folders>
         <Triggers />
       </Folder>
-      <Folder Id="b93b2ca7-3063-4bb7-afb0-fe25d23a4cb1" Name="A. 简介 + 指南" Enabled="true">
-        <Folders />
-        <Triggers>
-          <Trigger Enabled="true" Name="2. 您需要安装鲶鱼精邮差实现发送聊天与标记功能：github.com/Natsukage/PostNamazu" Id="06eca82e-b071-431f-902a-dbd25cbcf0ad" RegularExpression="">
-            <Actions />
-            <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="true" Name="3. 非常实验性，可能有很多误报" Id="c69b9c64-6306-4307-b6be-afd2806cdf3b" RegularExpression="">
-            <Actions />
-            <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
-          </Trigger>
-          <Trigger Enabled="true" Name="1. 进入正统优雷卡或下层后播报精英怪信息、播报陷阱触发信息、自动标记铜宝箱拟态怪。" Id="ee5a514e-d9db-4c77-af27-6f7ed9b86dd0" RegularExpression="">
-            <Actions />
-            <Condition Enabled="false" Grouping="Or" />
-            <Conditions />
-          </Trigger>
-        </Triggers>
-      </Folder>
-      <Folder Id="efd86848-da24-42b4-8734-b262e303c364" Name="Z. 更新日志" Enabled="true">
+      <Folder Id="9b8f4efe-a3a8-4a34-aeeb-05649497b19f" Name="Z. 更新日志" Enabled="true">
         <Folders>
-          <Folder Id="adeec800-ace5-4924-8f5b-9fd475915ff2" Name="24.05.02" Enabled="true">
+          <Folder Id="45836e65-923c-4060-98fd-08ee948e5948" Name="24.05.02" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="1. first commit" Id="b2169b0f-a7ca-4c8f-addd-ed40ed897dd8" RegularExpression="">
+              <Trigger Enabled="true" Name="1. 重制+修复" Id="e0a5a342-14cf-4779-8dd5-8aca61890e87" RegularExpression="">
                 <Actions />
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="4d86f6a3-96ac-49f5-ba34-d773cd56d665" Name="24.05.12" Enabled="true">
+          <Folder Id="3cd4e4a2-c3c6-446c-bf60-71498aee348a" Name="24.05.12" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="2. 新增快速切换小队模式/个人模式命令" Id="a38d34d9-9192-4472-bf83-fe04b813f6c2" RegularExpression="">
+              <Trigger Enabled="true" Name="2. 新增快速切换小队模式/个人模式命令" Id="3ca4f989-3af0-4618-a8f9-17538c77d6e2" RegularExpression="">
                 <Actions />
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="1. 陷阱检测与标记铜宝箱怪扩充至死者宫殿、天之御柱" Id="b0688b67-750f-4e35-a178-ea235d4bf44a" RegularExpression="">
+              <Trigger Enabled="true" Name="1. 陷阱检测与标记铜宝箱怪扩充至死者宫殿、天之御柱" Id="cbeb648c-1003-49d0-a109-2be1e9856560" RegularExpression="">
                 <Actions />
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="3. 修复铜宝箱怪重复标记" Id="2401bb9c-a34b-4246-a27f-07994b667c00" RegularExpression="">
+              <Trigger Enabled="true" Name="3. 修复铜宝箱怪重复标记" Id="1d37cc88-20a5-47f8-b6df-abab740e27b4" RegularExpression="">
                 <Actions />
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="4. 调整播报文本" Id="d5902186-fc90-4755-ac46-d3749f6cc5d3" RegularExpression="">
+              <Trigger Enabled="true" Name="4. 调整播报文本" Id="37ad1610-9ce3-4196-90de-b19d2df7d567" RegularExpression="">
                 <Actions />
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
-          <Folder Id="e6fc413b-c331-4479-88d4-ef1f32125f88" Name="24.05.23" Enabled="true">
+          <Folder Id="cbd4c04e-9d2a-43dd-b754-00b2126b5651" Name="24.05.23" Enabled="true">
             <Folders />
             <Triggers>
-              <Trigger Enabled="true" Name="2. 调整部分单人设置" Id="d7d29a70-b027-4ae6-9dea-0572fd8d808a" RegularExpression="">
+              <Trigger Enabled="true" Name="2. 调整部分单人设置" Id="26f68ac5-0d64-4500-ae6f-5bbd26ae6dce" RegularExpression="">
                 <Actions />
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="1. 修复快速切换区域遗失问题" Id="fa4b8ede-7db6-4c7d-9104-a375e968152b" RegularExpression="">
+              <Trigger Enabled="true" Name="1. 修复快速切换区域错误问题" Id="420c3092-202d-4e0f-aec3-4297d1647f98" RegularExpression="">
                 <Actions />
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
               </Trigger>
-              <Trigger Enabled="true" Name="3. 新增 诱饵陷阱近似检查" Id="541338b4-bf7d-4bb0-80d4-c87ad74379a8" RegularExpression="">
+              <Trigger Enabled="true" Name="3. 新增 诱饵陷阱近似检查" Id="eaf5598e-7787-442e-b8b9-90e8873ff024" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="d35a107a-3fa1-4812-a6a3-407789d1dd06" Name="24.05.24" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="1. 新增 诱饵陷阱精确检查(需要安装CactbotSelf插件)" Id="74b814b1-9c5d-4da9-9f55-21b68125a26e" RegularExpression="">
+                <Actions />
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="2. 修复 精英怪补偿重复播报" Id="cd320cad-d782-48ed-8b04-28ab0b26a0be" RegularExpression="">
                 <Actions />
                 <Condition Enabled="false" Grouping="Or" />
                 <Conditions />
@@ -1074,12 +1267,12 @@
       </Folder>
     </Folders>
     <Triggers>
-      <Trigger Enabled="true" Name="命令②-切换个人模式(进入区域与副本内): /e s2" Id="852c1a4d-78d5-45d0-9820-1f421ea17d5c" RegularExpression="">
+      <Trigger Enabled="true" Name="命令②-切换个人模式(进入区域与副本内): /e s2" Id="a151a185-1c8b-4f69-bf62-9d908cabf0c3" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
       </Trigger>
-      <Trigger Enabled="true" Name="命令①-切换小队模式(进入区域与副本内): /e s1 " Id="4fe3b607-3478-40d4-b14a-ab6612da43d5" RegularExpression="">
+      <Trigger Enabled="true" Name="命令①-切换小队模式(进入区域与副本内): /e s1 " Id="e3f453bb-7a93-4c26-9634-8399540b3ff1" RegularExpression="">
         <Actions />
         <Condition Enabled="false" Grouping="Or" />
         <Conditions />
